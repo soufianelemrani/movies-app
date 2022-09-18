@@ -1,0 +1,39 @@
+<app-header>
+  <app-input-search
+    [eng]="eng"
+    [fr]="fr"
+    (onSearch)="onSearch($event)"
+    [search]="searchControl"
+  ></app-input-search>
+  <app-icons
+    (onClick)="onClear()"
+    img
+    [clickable]="icon === 'X_icon'"
+    [icon]="icon"
+  ></app-icons>
+</app-header>
+<main class="main">
+  <ng-container *ngFor="let movie of showMovies; trackBy: trackByTconstFn">
+    <app-card-infos
+      [eng]="eng"
+      [fr]="fr"
+      (editMovie)="onEdit($event)"
+      [movie]="movie"
+    ></app-card-infos>
+  </ng-container>
+</main>
+<div class="img-container" *ngIf="isScrollable$ | async">
+  <app-icons
+    (onClick)="onScrollTop()"
+    img
+    [clickable]="true"
+    [icon]="'arrow_up'"
+  ></app-icons>
+</div>
+<footer class="footer fixed">
+  <app-pagination
+    [current]="currentPage"
+    [total]="totalPage"
+    (goTo)="onChangePage($event)"
+  ></app-pagination>
+</footer>

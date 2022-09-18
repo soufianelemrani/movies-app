@@ -1,0 +1,23 @@
+@import "../../../styles.scss";
+:host {
+  position: relative;
+}
+main {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: $gap;
+  margin: 0 map-get($margin-map, "5") 0 map-get($margin-map, "3");
+  padding: pxToRem(60px) 0 pxToRem(40px) 0;
+  @include sm {
+    margin: 0;
+  }
+}
+.img-container {
+  @include box(pxToRem(40px));
+  @include flex(row, center, center);
+  background-color: map-get($color-map, "light-gray");
+  position: sticky;
+  bottom: 40px;
+  left: 95%;
+  z-index: 125;
+}
