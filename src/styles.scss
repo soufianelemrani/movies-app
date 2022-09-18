@@ -1,0 +1,27 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import "./styles/main";
+
+.active {
+  color: map-get($color-map, "black") !important;
+}
+.overlay-backdrop {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.overlay-panel {
+  @include flex(column);
+  @include box-shadow(0 0 11px map-get($color-map, "shadow"));
+  background-color: map-get($color-map, "white");
+  padding: $overlay-padding;
+}
+.overlay-notif-panel {
+  @include flex(column, center, space-between);
+  background-color: map-get($color-map, "white");
+  @include box-shadow(0 0 11px map-get($color-map, "shadow"));
+  border-radius: $base-border-radius;
+}
+
+.filter {
+  filter: brightness(0.3);
+}
