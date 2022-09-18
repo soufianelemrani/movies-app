@@ -1,0 +1,81 @@
+@mixin createUtilities($map, $attribute, $class) {
+  @each $key, $val in $map {
+    .#{$class}-#{$key} {
+      #{$attribute}: $val;
+    }
+  }
+}
+// Small devices
+@mixin sm {
+  @media (max-width: map-get($breakpoints-map ,"sm")) {
+    @content;
+  }
+}
+
+// Medium devices
+@mixin md {
+  @media (max-width: map-get($breakpoints-map ,"md")) {
+    @content;
+  }
+}
+
+// Large devices
+@mixin lg {
+  @media (max-width: map-get($breakpoints-map ,"lg")) {
+    @content;
+  }
+}
+
+// Extra large devices
+@mixin xl {
+  @media (max-width: map-get($breakpoints-map ,"xl")) {
+    @content;
+  }
+}
+@mixin bearkpoints($size) {
+  @media (min-width: map-get($breakpoints-map , $size)) {
+    @content;
+  }
+}
+
+@mixin btn(
+  $bg-color,
+  $isgradient: false,
+  $endColor: map-get($color-map, "black")
+) {
+  text-decoration: none;
+  cursor: pointer;
+  border: 0;
+  color: map-get($color-map, "white");
+  width: pxToRem($min-width-btn);
+  font-size: map-get($font-map, medium);
+  @if ($isgradient==true) {
+    background: linear-gradient(0, $bg-color 0%, $endColor 100%);
+  } @else {
+    background-color: $bg-color;
+  }
+  padding: pxToRem($base-padding) pxToRem($base-padding * 12);
+}
+@mixin box($width, $height: $width) {
+  width: $width;
+  height: $height;
+}
+@mixin box-shadow($shadow...) {
+  -webkit-box-shadow: $shadow;
+  -moz-box-shadow: $shadow;
+  box-shadow: $shadow;
+}
+
+@mixin flex($direction: row, $align-item: unset, $justify: unset) {
+  display: flex;
+  align-items: $align-item;
+  justify-content: $justify;
+  flex-direction: $direction;
+}
+
+@mixin ellipse($width) {
+  white-space: nowrap;
+  width: $width;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
