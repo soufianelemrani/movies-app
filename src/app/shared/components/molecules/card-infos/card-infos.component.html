@@ -1,0 +1,42 @@
+<div class="card round container">
+  <section>
+    <header>
+      <div *ngIf="movie">
+        <span [title]="movie.primaryTitle" class="title">{{
+          movie.primaryTitle
+        }}</span>
+        <span [title]="movie.originalTitle" class="sub-title">{{
+          movie.originalTitle
+        }}</span>
+      </div>
+      <app-icons
+        clickable="true"
+        (onClick)="onEdit(movie)"
+        icon="icon_pencil"
+      ></app-icons>
+    </header>
+    <main *ngIf="movie" class="tags">
+      <app-tags title="ID" [value]="movie.tconst"></app-tags>
+      <app-tags
+        title="Minutes"
+        [value]="displayInfos(movie.runtimeMinutes)"
+      ></app-tags>
+      <app-tags
+        [title]="'STARTYEAR' | translate: fileLanguage"
+        [value]="displayInfos(movie.startYear)"
+      ></app-tags>
+      <app-tags
+        [title]="'ENDYEAR' | translate: fileLanguage"
+        [value]="displayInfos(movie.endYear)"
+      ></app-tags>
+      <app-tags
+        [title]="'ISADULT' | translate: fileLanguage"
+        [value]="isAdult(movie)"
+      ></app-tags>
+      <app-tags title="Genres" [value]="movie.genres"></app-tags>
+    </main>
+  </section>
+  <div class="bg-img">
+    <app-icons icon="icon_poster"></app-icons>
+  </div>
+</div>
