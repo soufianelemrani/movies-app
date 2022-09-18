@@ -1,0 +1,35 @@
+.header {
+  @include flex(row, center);
+  position: fixed;
+  top: 0;
+  background: linear-gradient(
+    180deg,
+    map-get($color-map, "primary") 0%,
+    map-get($color-map, "black") 100%
+  );
+  @include box(100%, $header-height);
+  .logo {
+    margin: 0 map-get($margin-map, "3");
+  }
+  .content {
+    flex: 1;
+    height: pxToRem(32px);
+    @include sm {
+      flex: 0.9;
+    }
+  }
+  .icons {
+    @include flex(row, center);
+  }
+  app-icons {
+    margin: 0 map-get($margin-map, "3");
+    &:first-child {
+      display: none;
+      @include sm {
+        display: initial;
+        margin-right: map-get($margin-map, "4");
+        filter: brightness((50));
+      }
+    }
+  }
+}

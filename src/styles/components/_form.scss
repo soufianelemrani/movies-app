@@ -1,0 +1,11 @@
+.form-container {
+  display: flex;
+  padding-bottom: $base-padding * 8;
+  label {
+    font-size: map-get($font-map, medium);
+    font-weight: 500;
+    white-space: nowrap;
+    width: pxToRem(50px);
+    margin-right: map-get($margin-map, "5");
+  }
+}

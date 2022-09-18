@@ -1,0 +1,16 @@
+.tag {
+  text-align: center;
+  margin: map-get($margin-map, "3");
+  span:first-child {
+    display: block;
+    background-color: map-get($color-map, "light-gray");
+    color: map-get($color-map, "secondary");
+    font-size: map-get($font-map, "x-small");
+    font-weight: 100;
+  }
+  span:last-child {
+    font-size: map-get($font-map, "xx-small");
+    @include ellipse(pxToRem(70px));
+    font-weight: 300;
+  }
+}

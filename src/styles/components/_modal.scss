@@ -1,0 +1,19 @@
+.modal {
+  @include flex(column);
+  .title {
+    @include flex(row, center, flex-end);
+    @include box(100%, pxToRem(32px));
+    margin-bottom: map-get($margin-map, "5");
+    span {
+      flex: 0.5;
+      align-self: end;
+    }
+    app-icons {
+      align-self: baseline;
+    }
+  }
+  main {
+    margin: 0 auto;
+    width: 85%;
+  }
+}

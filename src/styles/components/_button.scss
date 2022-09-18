@@ -1,0 +1,14 @@
+@each $key, $val in $color-map {
+  @if ($key == "primary" or $key == "secondary") {
+    .btn-#{$key} {
+      @if ($key == "primary") {
+        @include btn($val, true);
+      } @else {
+        @include btn($val);
+      }
+      &:hover {
+        background-color: lighten($val, 5);
+      }
+    }
+  }
+}

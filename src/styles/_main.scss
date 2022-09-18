@@ -1,0 +1,17 @@
+@import "variables";
+@import "functions";
+@import "mixins";
+@import "base";
+@import "utilities";
+@import "components/button";
+@import "components/form";
+@import "components/card";
+@import "components/header";
+@import "components/input-search";
+@import "components/tag";
+@import "components/pagination";
+@import "components/footer";
+@import "components/notif";
+@import "components/modal";
+@import "@angular/cdk/overlay-prebuilt.css";
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap");

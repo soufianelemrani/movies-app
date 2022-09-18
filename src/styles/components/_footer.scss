@@ -1,0 +1,13 @@
+.footer {
+  width: 100%;
+  @include box(100%, $footer-height);
+  @include flex(row, center, center);
+  button:first-child {
+    margin-right: map-get($margin-map, "4");
+  }
+}
+.fixed {
+  background-color: map-get($color-map, "light-gray");
+  position: fixed;
+  bottom: 0;
+}
