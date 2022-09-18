@@ -1,0 +1,41 @@
+@import "../../../../../styles.scss";
+.container {
+  @include flex;
+  @include box(100%, pxToRem(150px));
+  section {
+    flex: 1;
+    padding: map-get($padding-map, "4");
+    header {
+      @include flex(row, unset, space-between);
+      div {
+        span {
+          display: block;
+          @include ellipse(pxToRem(270px));
+          &.title {
+            font-size: map-get($font-map, "large");
+          }
+          &.sub-title {
+            font-size: map-get($font-map, "x-medium");
+            font-weight: 100;
+            color: map-get($color-map, "dark-gray");
+            font-style: italic;
+          }
+        }
+      }
+    }
+  }
+  .bg-img {
+    background-color: map-get($color-map, "light-gray");
+    height: 100%;
+    @include flex(row, center);
+    padding: 0 map-get($padding-map, "4");
+    border-radius: $base-border-radius;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+  .tags {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20%, 1fr));
+    gap: 2px;
+  }
+}

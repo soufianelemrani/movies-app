@@ -1,0 +1,12 @@
+.pagination {
+  @include flex;
+  gap: map-get($margin-map, "3");
+  span {
+    font-size: map-get($font-map, "medium");
+    color: map-get($color-map, "secondary");
+    cursor: pointer;
+    &:hover {
+      color: map-get($color-map, "black") !important;
+    }
+  }
+}

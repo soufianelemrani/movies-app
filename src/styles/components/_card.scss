@@ -1,0 +1,7 @@
+.card {
+  @include box-shadow(0 0 11px map-get($color-map, "shadow"));
+  background-color: map-get($color-map, "white");
+  &.round {
+    border-radius: $base-border-radius;
+  }
+}

@@ -1,0 +1,63 @@
+@import "functions";
+
+$base-font-size: 16px;
+$base-padding: 2px;
+$base-margin: 4px;
+$base-border-radius: 16px;
+$header-height: pxToRem(50px);
+$footer-height: pxToRem(32px);
+$gap: 2rem;
+$tag-width: pxToRem(100px);
+$overlay-padding: 0.5rem;
+$min-width-btn: 100px;
+$color-map: (
+  "black": #000000,
+  "light-gray": #f3f3f3,
+  "secondary": #9b9b9b,
+  "dark-gray": #4a4a4a,
+  "success": #19e635,
+  "error": #e61919,
+  "white": white,
+  "primary": #494848,
+  "shadow": #e8e5e5,
+  "bg": #171717,
+);
+
+$font-map: (
+  large: pxToRem($base-font-size + 2px),
+  regular: pxToRem($base-font-size),
+  medium: pxToRem($base-font-size - 2px),
+  x-medium: pxToRem($base-font-size - 4px),
+  x-small: pxToRem($base-font-size - 5px),
+  xx-small: pxToRem($base-font-size - 6px),
+);
+
+$breakpoints-map: (
+  "sm": 576px,
+  "md": 768px,
+  "lg": 992px,
+  "xl": 1200px,
+);
+
+$font-size-bp: (
+  "xs": pxToRem($base-font-size - 3px),
+  "sm": pxToRem($base-font-size - 2px),
+  "md": pxToRem($base-font-size),
+  "lg": pxToRem($base-font-size + 2px),
+  "xl": pxToRem($base-font-size + 3px),
+);
+
+$margin-map: (
+  "0": 0,
+  "2": pxToRem($base-margin),
+  "3": pxToRem($base-margin * 2),
+  "4": pxToRem($base-margin * 4),
+  "5": pxToRem($base-margin * 6),
+);
+$padding-map: (
+  "0": 0,
+  "2": pxToRem($base-padding),
+  "3": pxToRem($base-padding * 2),
+  "4": pxToRem($base-padding * 4),
+  "5": pxToRem($base-padding * 6),
+);

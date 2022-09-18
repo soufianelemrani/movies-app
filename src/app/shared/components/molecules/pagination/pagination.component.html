@@ -1,0 +1,13 @@
+<div class="pagination">
+  <span *ngIf="current !== 1" (click)="onGoTo('previous')">&#8249;</span>
+  <ng-container *ngFor="let page of pages">
+    <span
+      [class.active]="page == current"
+      *ngIf="page !== -1"
+      (click)="onGoTo('page', page)"
+      >{{ page }}</span
+    >
+    <span *ngIf="page == -1">...</span>
+  </ng-container>
+  <span *ngIf="current !== total" (click)="onGoTo('next')">&#8250;</span>
+</div>

@@ -1,0 +1,19 @@
+html,
+body {
+  font-family: "Roboto";
+  width: 100%;
+  height: 100%;
+  @include sm {
+    background-color: map-get($color-map, "bg");
+  }
+  @each $key, $val in $font-size-bp {
+    @include bearkpoints($key) {
+      font-size: $val;
+    }
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}

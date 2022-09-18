@@ -1,0 +1,11 @@
+{
+  "ISADULT": "Is adult",
+  "STARTYEAR": "Start year",
+  "ENDYEAR": "End Year",
+  "SEARCHPLACEHOLDER": "Search a movie...",
+  "EDITMOVIEERROR": "Start year must be lesser than end year",
+  "EDITMOVIESUCCESS": "the movie is updated successfully",
+  "NORESULTFOUND": "No film was found...",
+  "EDITING": "Editing",
+  "CANCEL": "CANCEL"
+}

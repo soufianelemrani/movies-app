@@ -1,0 +1,12 @@
+.notif {
+  @include flex(row, center);
+  padding: 0.5rem;
+  gap: 0.5rem;
+  img {
+    height: 1rem;
+    width: auto;
+  }
+  span {
+    font-size: map-get($font-map, "medium");
+  }
+}

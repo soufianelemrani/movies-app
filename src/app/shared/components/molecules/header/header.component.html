@@ -1,0 +1,21 @@
+<header class="header">
+  <div class="logo">
+    <img src="assets/icons/logo.svg" />
+  </div>
+  <div class="content"><ng-content></ng-content></div>
+  <div class="icons">
+    <ng-content select="[img]"></ng-content>
+    <app-icons
+      [class.filter]="lang !== 'fr'"
+      (onClick)="onChangeLanguage('fr')"
+      icon="flag_fr"
+      clickable="true"
+    ></app-icons>
+    <app-icons
+      [class.filter]="lang !== 'eng'"
+      (onClick)="onChangeLanguage('eng')"
+      icon="flag_usa"
+      clickable="true"
+    ></app-icons>
+  </div>
+</header>

@@ -1,0 +1,30 @@
+.input-search-container {
+  position: relative;
+  width: 100%;
+  input {
+    width: 30%;
+    &::placeholder {
+      font-size: inherit;
+      font-size: map-get($font-map, "x-medium");
+      font-style: italic;
+    }
+    @include sm {
+      outline: 0;
+      border: 0;
+      background-color: inherit;
+      color: map-get($color-map, "white");
+      width: 80%;
+    }
+  }
+  img {
+    position: absolute;
+    right: 70%;
+    top: 30%;
+    @include lg {
+      top: 12%;
+    }
+    @include sm {
+      opacity: 0;
+    }
+  }
+}
