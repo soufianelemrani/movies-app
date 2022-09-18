@@ -2,7 +2,7 @@
   position: relative;
   width: 100%;
   input {
-    width: 50%;
+    width: 30%;
     &::placeholder {
       font-size: inherit;
       font-size: map-get($font-map, "x-medium");
@@ -18,7 +18,7 @@
   }
   img {
     position: absolute;
-    right: 50%;
+    right: 70%;
     top: 30%;
     @include lg {
       top: 12%;
