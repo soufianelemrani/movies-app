@@ -1,0 +1,47 @@
+<app-modal
+  [title]="'EDITING' | translate: data.translate"
+  (onClose)="onCloseModal()"
+>
+  <form class="form" [formGroup]="editMovieForm">
+    <app-checkbox-group
+      [label]="'ISADULT' | translate: data.translate"
+      formControlName="isAdult"
+    >
+      <app-checkbox value="Yes" label="Yes"></app-checkbox>
+      <app-checkbox value="No" label="No"></app-checkbox>
+    </app-checkbox-group>
+    <app-input
+      width="120px"
+      [type]="'number'"
+      [label]="'Minutes'"
+      [control]="editMovieForm.get('runtimeMinutes')"
+    ></app-input>
+    <app-select
+      width="100%"
+      [label]="'STARTYEAR' | translate: data.translate"
+      [control]="editMovieForm.get('startYear')"
+      [options]="years"
+    >
+    </app-select>
+    <app-select
+      width="100%"
+      [label]="'ENDYEAR' | translate: data.translate"
+      [control]="editMovieForm.get('endYear')"
+      [options]="years"
+    >
+    </app-select>
+    <app-select
+      width="80%"
+      label="Genres"
+      [control]="editMovieForm.get('genres')"
+      [options]="genres"
+    >
+    </app-select>
+  </form>
+  <div class="footer" footer>
+    <button class="btn-primary" (click)="onEdit()">OK</button>
+    <button class="btn-secondary" (click)="onCloseModal()">
+      {{ "CANCEL" | translate: data.translate }}
+    </button>
+  </div>
+</app-modal>
