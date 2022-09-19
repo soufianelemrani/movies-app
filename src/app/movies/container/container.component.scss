@@ -4,10 +4,13 @@
 }
 main {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   gap: $gap;
   margin: 0 map-get($margin-map, "5") 0 map-get($margin-map, "3");
   padding: pxToRem(60px) 0 pxToRem(40px) 0;
+  grid-template-columns: repeat(3, 1fr);
+  @include md {
+    grid-template-columns: repeat(1, 1fr);
+  }
   @include sm {
     margin: 0;
   }

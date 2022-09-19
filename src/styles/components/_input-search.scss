@@ -24,7 +24,7 @@
       top: 12%;
     }
     @include sm {
-      opacity: 0;
+      display: none;
     }
   }
 }
