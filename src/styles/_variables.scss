@@ -40,7 +40,6 @@ $breakpoints-map: (
 );
 
 $font-size-bp: (
-  "xs": pxToRem($base-font-size - 3px),
   "sm": pxToRem($base-font-size - 2px),
   "md": pxToRem($base-font-size),
   "lg": pxToRem($base-font-size + 2px),
